@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <!-- AOS Animations CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container" data-aos="zoom-in">
+        <h1 data-aos="fade-down">QR Code Generator</h1>
+        <input type="text" id="qrText" placeholder="Enter text for QR Code" data-aos="fade-up">
+        <button id="generateBtn" data-aos="flip-left">Generate QR Code</button>
+        <div id="qrResult" data-aos="fade-in">
+            <img id="qrImage" src="" alt="Your QR Code will appear here" style="display: none;">
+            <a id="downloadBtn" style="display: none;" download="qrcode.png">
+                <button>Download QR Code</button>
+            </a>
+        </div>
+    </div>
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

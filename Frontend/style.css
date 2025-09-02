@@ -1,0 +1,96 @@
+/* Background with overlay and particles effect */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+.overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30, 35, 60, 0.7);
+    z-index: 0;
+}
+/* Center content */
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    margin: 10vh auto 0 auto;
+    background: rgba(255,255,255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(30,30,60,0.25);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+h1 {
+    color: #31365F;
+    font-size: 2.2rem;
+    margin-bottom: 1.4rem;
+    letter-spacing: 1px;
+}
+input[type="text"] {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    transition: border 0.2s;
+    outline: none;
+}
+input[type="text"]:focus {
+    border: 2px solid #3C7BC9;
+}
+button {
+    background: linear-gradient(90deg, #3C7BC9 0%, #8EC5FC 100%);
+    border: none;
+    color: #fff;
+    font-size: 1.05rem;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+button:hover {
+    background: linear-gradient(90deg, #6F8DE6 0%, #A0D9FF 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(60,123,201,0.15);
+}
+
+#qrResult {
+    margin-top: 1.7rem;
+}
+#qrImage {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    box-shadow: 0 3px 16px rgba(60, 123, 201,0.07);
+    margin-bottom: 1.2rem;
+}
+
+@media (max-width: 520px) {
+    .container {
+        max-width: 90vw;
+        padding: 1.3rem 0.7rem;
+    }
+    #qrImage {
+        width: 140px;
+        height: 140px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Extra style for animation and gradient */
+input:placeholder-shown {
+    color: #9AACCB;
+    font-style: italic;
+}
